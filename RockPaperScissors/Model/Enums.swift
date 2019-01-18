@@ -26,4 +26,44 @@ extension Move {
             return UIImage(named: "scissors")!
         }
     }
+    func scoreAgainst(move: Move) -> Int {
+        switch self {
+        case .rock:
+            switch move {
+            case .rock:
+                return 0
+                
+            case .paper:
+                return -1
+                
+            case .scissors:
+                return 1
+            }
+            
+        case .paper:
+            switch move {
+            case .rock:
+                return 1
+                
+            case .paper:
+                return 0
+                
+            case .scissors:
+                return -1
+            }
+            
+        case .scissors:
+            switch move {
+            case .rock:
+                return -1
+                
+            case .paper:
+                return 1
+                
+            case .scissors:
+                return 0
+            }
+        }
+    }
 }
+

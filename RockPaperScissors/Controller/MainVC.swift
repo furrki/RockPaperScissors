@@ -13,6 +13,9 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var opMoves: UIStackView!
     @IBOutlet weak var playerMoves: UIStackView!
     
+    @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var pimgs: [MoveImageView] = []
     var opimgs: [MoveImageView] = []
     var isProcessing:Bool = false
@@ -62,6 +65,11 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
                 print("View Not Found")
             }
         }
+    }
+    
+    func refreshLabels() {
+        scoreLabel.text = "\(Game.shared.score)"
+        roundLabel.text = "\(Game.shared.round)"
     }
     
     @objc func reset(){

@@ -181,6 +181,8 @@
                     <connections>
                         <outlet property="opMoves" destination="y25-4O-K2K" id="PHJ-1A-70a"/>
                         <outlet property="playerMoves" destination="cmt-IP-gb2" id="Mjb-6w-chL"/>
+                        <outlet property="roundLabel" destination="NTE-9V-6NO" id="7UP-wC-xZV"/>
+                        <outlet property="scoreLabel" destination="XeU-zs-kwz" id="QFq-Ov-zt6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

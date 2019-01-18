@@ -18,10 +18,12 @@ class MoveImageView: UIImageView {
     override func prepareForInterfaceBuilder() {
         custom()
     }
-    func custom(){ 
+    
+    func custom(){
         self.layer.cornerRadius = 4
         
     }
+    
     override func draw(_ rect: CGRect) {
         self.draw(rect)
     }

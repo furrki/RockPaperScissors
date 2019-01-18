@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func fadeOut(completion: @escaping (_ result: Bool)->()){
+    func fadeOut(completion: @escaping ()->()){
         UIView.animate(withDuration: 0.8, animations: {
             self.alpha = 0.2
         }, completion: { (finished: Bool) in
-            completion(finished)
+            completion()
         })
     }
-    func fadeIn(completion: @escaping (_ result: Bool)->()){
+    func fadeIn(completion: @escaping ()->()){
         UIView.animate(withDuration: 0.8, animations: {
             self.alpha = 1.0
         }, completion: { (finished: Bool) in
-            completion(finished)
+            completion()
         })
     }
 }

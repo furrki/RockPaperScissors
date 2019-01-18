@@ -17,12 +17,91 @@
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.17638843911917101" green="0.17638843911917101" blue="0.17638843911917101" alpha="0.90138094190140849" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="y25-4O-K2K">
+                                <rect key="frame" x="192.5" y="30" width="282" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-ul-poI" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="EOa-0f-4h4"/>
+                                            <constraint firstAttribute="height" constant="80" id="Wo0-yd-N5U"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="tap-Mt-NcS" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="101" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Dad-5E-9tZ"/>
+                                            <constraint firstAttribute="height" constant="80" id="QtK-tK-fGY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="XYe-kl-kLQ" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="M4L-Qc-dNz"/>
+                                            <constraint firstAttribute="height" constant="80" id="or0-IP-Zcx"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Eq7-rD-msx"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="cmt-IP-gb2">
+                                <rect key="frame" x="192.5" y="264" width="282" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="DDO-LH-mOe" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="dIy-uB-oeH"/>
+                                            <constraint firstAttribute="height" constant="80" id="hfw-h6-ccF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="kcb-Qj-3w1" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="101" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="UWS-7t-mZa"/>
+                                            <constraint firstAttribute="width" constant="80" id="kda-Ct-19E"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-wT-Iv1" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="ADb-V3-dy6"/>
+                                            <constraint firstAttribute="height" constant="80" id="Nhm-vm-nC3"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ni2-sy-vV4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="zn2-lZ-bD8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cmt-IP-gb2" secondAttribute="bottom" constant="31" id="O86-C6-zlr"/>
+                            <constraint firstItem="cmt-IP-gb2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aZL-jv-ecm"/>
+                            <constraint firstItem="y25-4O-K2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="uWx-et-rMW"/>
+                            <constraint firstItem="y25-4O-K2K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vRx-HT-AfT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="23.838080959520241" y="45.600000000000001"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="128" height="128"/>
+        <image name="rock" width="128" height="128"/>
+        <image name="scissors" width="128" height="128"/>
+    </resources>
 </document>

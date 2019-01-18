@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8421F00B21F2016C0020E2E5 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421F00A21F2016C0020E2E5 /* Animations.swift */; };
+		8421F00C21F2016C0020E2E5 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421F00A21F2016C0020E2E5 /* Animations.swift */; };
+		8421F00D21F2016C0020E2E5 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421F00A21F2016C0020E2E5 /* Animations.swift */; };
 		8422DF9921F1CC4F000367AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422DF9821F1CC4F000367AF /* AppDelegate.swift */; };
 		8422DF9B21F1CC4F000367AF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422DF9A21F1CC4F000367AF /* MainVC.swift */; };
 		8422DF9E21F1CC4F000367AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8422DF9C21F1CC4F000367AF /* Main.storyboard */; };
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8421F00A21F2016C0020E2E5 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		8422DF9521F1CC4F000367AF /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8422DF9821F1CC4F000367AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8422DF9A21F1CC4F000367AF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				8422DFCD21F1DF58000367AF /* MoveImageView.swift */,
+				8421F00A21F2016C0020E2E5 /* Animations.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			files = (
 				8422DF9B21F1CC4F000367AF /* MainVC.swift in Sources */,
 				8422DFCA21F1DF1D000367AF /* Game.swift in Sources */,
+				8421F00B21F2016C0020E2E5 /* Animations.swift in Sources */,
 				8422DFD221F1DFB8000367AF /* Enums.swift in Sources */,
 				8422DF9921F1CC4F000367AF /* AppDelegate.swift in Sources */,
 				8422DFCE21F1DF58000367AF /* MoveImageView.swift in Sources */,
@@ -308,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8422DFCF21F1DF58000367AF /* MoveImageView.swift in Sources */,
+				8421F00C21F2016C0020E2E5 /* Animations.swift in Sources */,
 				8422DFAE21F1CC51000367AF /* RockPaperScissorsTests.swift in Sources */,
 				8422DFD321F1DFB8000367AF /* Enums.swift in Sources */,
 				8422DFCB21F1DF1D000367AF /* Game.swift in Sources */,
@@ -319,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8422DFD021F1DF58000367AF /* MoveImageView.swift in Sources */,
+				8421F00D21F2016C0020E2E5 /* Animations.swift in Sources */,
 				8422DFB921F1CC52000367AF /* RockPaperScissorsUITests.swift in Sources */,
 				8422DFD421F1DFB8000367AF /* Enums.swift in Sources */,
 				8422DFCC21F1DF1D000367AF /* Game.swift in Sources */,
@@ -486,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(CONFIGURATION_BUILD_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = furrki.RockPaperScissors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,6 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(CONFIGURATION_BUILD_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = furrki.RockPaperScissors;
 				PRODUCT_NAME = "$(TARGET_NAME)";

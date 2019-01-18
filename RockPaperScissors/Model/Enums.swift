@@ -8,12 +8,12 @@
 
 import Foundation
 import UIKit
-enum Moves: CaseIterable {
+enum Move: CaseIterable {
     case rock
     case paper
     case scissors
 }
-extension Moves {
+extension Move {
     var img: UIImage {
         switch self {
         case .rock:

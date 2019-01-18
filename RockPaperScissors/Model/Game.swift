@@ -13,13 +13,21 @@ class Game {
     
     var score = 0
     var round = 0
+    var lastOpMove: Move = .rock
     
-    func generateOpMove(){
-        let myMove = [Move.rock, Move.paper, Move.scissors].randomElement()
+    func generateOpMove() -> Move {
+       return [Move.rock, Move.paper, Move.scissors].randomElement()!
     }
     
     func move(_ m: Move){
-        
-        
+        let opMove = generateOpMove()
+        lastOpMove = opMove
+        score += m.scoreAgainst(move: opMove)
+        round += 1
+    }
+    
+    func initialize(){
+        round = 0
+        score = 0
     }
 }

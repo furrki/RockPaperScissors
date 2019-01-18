@@ -73,6 +73,7 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func reset(){
+        refreshLabels()
         let _ = pimgs.map({ $0.fadeIn {
             self.isProcessing = false
             }

@@ -18,11 +18,8 @@ class MoveImageView: UIImageView {
     override func prepareForInterfaceBuilder() {
         custom()
     }
-    func custom(){
-       // self.layer.borderWidth = 2
-       // self.layer.borderColor = #colorLiteral(red: 0.9321536233, green: 0.9321536233, blue: 0.9321536233, alpha: 1)
+    func custom(){ 
         self.layer.cornerRadius = 4
-        self.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1)
         
     }
     override func draw(_ rect: CGRect) {

@@ -15,10 +15,20 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     
     var pimgs: [MoveImageView] = []
     var opimgs: [MoveImageView] = []
+    var isProcessing:Bool = false
+    var turnTimer: Timer?
+    
+    deinit {
+        if let tt = turnTimer {
+            tt.invalidate()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        
+        Game.shared.initialize()
         pimgs = playerMoves.subviews.filter({ $0 is MoveImageView }) as! [MoveImageView]
         opimgs = opMoves.subviews.filter({ $0 is MoveImageView }) as! [MoveImageView]
         
@@ -30,16 +40,39 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        if let sv = sender.view {
-            let nonclickedImages = pimgs.filter({ $0.tag != sv.tag })
-            for nci in nonclickedImages {
-                nci.fadeOut {
-                    
+        if !isProcessing {
+            if let sv = sender.view {
+                isProcessing = true
+                let nonclickedImages = pimgs.filter({ $0.tag != sv.tag })
+                for nci in nonclickedImages {
+                    nci.fadeOut {}
                 }
+                
+                Game.shared.move(Move.getByTag(sv.tag))
+                
+                let opMove = Game.shared.lastOpMove
+                let nonselectedImages = opimgs.filter({ $0.tag != opMove.tag })
+                for nsi in nonselectedImages {
+                    nsi.fadeOut {}
+                }
+                turnTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
+                    self.reset()
+                }
+            } else {
+                print("View Not Found")
             }
-        } else {
-            print("View Not Found")
         }
+    }
+    
+    @objc func reset(){
+        let _ = pimgs.map({ $0.fadeIn {
+            self.isProcessing = false
+            }
+        })
+        let _ = opimgs.map({ $0.fadeIn {
+            self.isProcessing = false
+            }
+        })
     }
 
 }

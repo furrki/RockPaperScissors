@@ -26,6 +26,28 @@ extension Move {
             return UIImage(named: "scissors")!
         }
     }
+    var tag: Int {
+        switch self {
+        case .rock:
+            return 1
+            
+        case .paper:
+            return 2
+            
+        case .scissors:
+            return 3
+        }
+    }
+    static func getByTag(_ tag: Int) -> Move {
+        if tag == 1 {
+            return .rock
+        } else if tag == 2 {
+            return .paper
+        } else if tag == 3 {
+            return .scissors
+        }
+        return .rock
+    }
     func scoreAgainst(move: Move) -> Int {
         switch self {
         case .rock:

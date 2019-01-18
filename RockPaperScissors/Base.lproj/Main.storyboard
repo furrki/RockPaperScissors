@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="y25-4O-K2K">
                                 <rect key="frame" x="192.5" y="30" width="282" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-ul-poI" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-ul-poI" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -29,7 +29,7 @@
                                             <constraint firstAttribute="height" constant="80" id="Wo0-yd-N5U"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="tap-Mt-NcS" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="tap-Mt-NcS" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="101" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -37,7 +37,7 @@
                                             <constraint firstAttribute="height" constant="80" id="QtK-tK-fGY"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="XYe-kl-kLQ" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="XYe-kl-kLQ" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="202" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -53,7 +53,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="cmt-IP-gb2">
                                 <rect key="frame" x="192.5" y="264" width="282" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="DDO-LH-mOe" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                    <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="DDO-LH-mOe" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -61,7 +61,7 @@
                                             <constraint firstAttribute="height" constant="80" id="hfw-h6-ccF"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="kcb-Qj-3w1" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                    <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="kcb-Qj-3w1" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="101" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -69,7 +69,7 @@
                                             <constraint firstAttribute="width" constant="80" id="kda-Ct-19E"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-wT-Iv1" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
+                                    <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-wT-Iv1" customClass="MoveImageView" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="202" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -93,6 +93,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="opMoves" destination="y25-4O-K2K" id="PHJ-1A-70a"/>
+                        <outlet property="playerMoves" destination="cmt-IP-gb2" id="Mjb-6w-chL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

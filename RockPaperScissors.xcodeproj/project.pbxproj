@@ -116,7 +116,6 @@
 				8422DFC821F1DA66000367AF /* Controller */,
 				8422DFC721F1DA5F000367AF /* View */,
 				8422DFC621F1DA54000367AF /* Model */,
-				8422DF9821F1CC4F000367AF /* AppDelegate.swift */,
 				8422DF9C21F1CC4F000367AF /* Main.storyboard */,
 				8422DF9F21F1CC51000367AF /* Assets.xcassets */,
 				8422DFA121F1CC51000367AF /* LaunchScreen.storyboard */,
@@ -164,6 +163,7 @@
 		8422DFC821F1DA66000367AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8422DF9821F1CC4F000367AF /* AppDelegate.swift */,
 				8422DF9A21F1CC4F000367AF /* MainVC.swift */,
 			);
 			path = Controller;

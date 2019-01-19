@@ -1,9 +1,9 @@
 # RockPaperScissors 
 This app is the classical Rock Paper Scissors game. When the game screen appears, you select a move and then the AI generates a move against you. After that, If you win or lose the round, the game notifies you and updates score and round text.
-
-**Rock** -> Beats **Scissor**, Loses Against **Paper**
-**Paper** -> Beats **Rock**, Loses Against **Scissor**
-**Scissor** -> Beats **Paper**, Loses Against **Rock**
+</br>
+**Rock** -> Beats **Scissor**, Loses Against **Paper**</br>
+**Paper** -> Beats **Rock**, Loses Against **Scissor**</br>
+**Scissor** -> Beats **Paper**, Loses Against **Rock**</br>
 
 
 # Installation

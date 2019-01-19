@@ -9,7 +9,7 @@
 import UIKit
 
 class MainVC: UIViewController, UIGestureRecognizerDelegate {
-
+    
     @IBOutlet weak var opMoves: UIStackView!
     @IBOutlet weak var playerMoves: UIStackView!
     
@@ -20,6 +20,7 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     var opimgs: [MoveImageView] = []
     var isProcessing:Bool = false
     var turnTimer: Timer?
+    let am = AudioManager()
     
     deinit {
         if let tt = turnTimer {
@@ -29,7 +30,7 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         
         Game.shared.initialize()
         pimgs = playerMoves.subviews.filter({ $0 is MoveImageView }) as! [MoveImageView]
@@ -40,45 +41,55 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
             tap.delegate = self
             img.addGestureRecognizer(tap)
         }
+        am.installTap { (r) in
+            self.sttCheck(r: r)
+        }
     }
-
+    
     @objc func handleTap(sender: UITapGestureRecognizer) {
+        
+        if let sv = sender.view {
+            select(move: Move.getBy(tag: sv.tag))
+        } else {
+            print("View Not Found")
+        }
+        
+    }
+    func select(move: Move){
         if !isProcessing {
-            if let sv = sender.view {
-                isProcessing = true
-                let nonclickedImages = pimgs.filter({ $0.tag != sv.tag })
-                for nci in nonclickedImages {
-                    nci.fadeOut {}
+            isProcessing = true
+            am.removeTap()
+            
+            let sv = pimgs.filter({ $0.tag == move.tag }).first!
+            let nonclickedImages = pimgs.filter({ $0.tag != sv.tag })
+            for nci in nonclickedImages {
+                nci.fadeOut {}
+            }
+            
+            let dscore = Game.shared.move(Move.getBy(tag: sv.tag))
+            
+            let opMove = Game.shared.lastOpMove
+            let nonselectedImages = opimgs.filter({ $0.tag != opMove.tag })
+            for nsi in nonselectedImages {
+                nsi.fadeOut {}
+            }
+            let opSelected = opimgs.filter({ $0.tag == opMove.tag }).first!
+            
+            if dscore == 1 {
+                sv.shake {
+                    self.reset()
                 }
-                
-                let dscore = Game.shared.move(Move.getByTag(sv.tag))
-                
-                let opMove = Game.shared.lastOpMove
-                let nonselectedImages = opimgs.filter({ $0.tag != opMove.tag })
-                for nsi in nonselectedImages {
-                    nsi.fadeOut {}
+            } else if dscore == -1 {
+                opSelected.shake {
+                    self.reset()
                 }
-                let opSelected = opimgs.filter({ $0.tag == opMove.tag }).first!
-                
-                if dscore == 1 {
-                    sv.shake {
-                        self.reset()
-                    }
-                } else if dscore == -1 {
-                    opSelected.shake {
-                        self.reset()
-                    }
-                } else {
-                    sv.shake{
-                        self.reset()
-                    }
-                    opSelected.shake {
-                        self.reset()
-                    }
-                }
-                
             } else {
-                print("View Not Found")
+                sv.shake{
+                    self.reset()
+                }
+                opSelected.shake {
+                    self.reset()
+                }
             }
         }
     }
@@ -96,9 +107,28 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
         })
         let _ = opimgs.map({ $0.fadeIn {
             self.isProcessing = false
+            
             }
         })
+        am.installTap { (r) in
+            self.sttCheck(r: r)
+        }
     }
-
+    func sttCheck(r: String){
+        print(r)
+        switch r  {
+        case Move.rock.str:
+            self.select(move: .rock)
+            break
+        case Move.paper.str:
+            self.select(move: .paper)
+            break
+        case Move.scissors.str:
+            self.select(move: .scissors)
+            break
+        default: break
+            
+        }
+    }
 }
 

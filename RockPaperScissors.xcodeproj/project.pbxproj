@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8413D60021F3224000465321 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413D5FF21F3224000465321 /* String.swift */; };
 		8418954E21F319DC00DEE87E /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418954D21F319DC00DEE87E /* AudioManager.swift */; };
 		8418954F21F319DC00DEE87E /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418954D21F319DC00DEE87E /* AudioManager.swift */; };
 		8418955021F319DC00DEE87E /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418954D21F319DC00DEE87E /* AudioManager.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8413D5FF21F3224000465321 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8418954D21F319DC00DEE87E /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		8421F00A21F2016C0020E2E5 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		8422DF9521F1CC4F000367AF /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8413D5FE21F3222900465321 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8413D5FF21F3224000465321 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8422DF8C21F1CC4E000367AF = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		8422DF9721F1CC4F000367AF /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				8413D5FE21F3222900465321 /* Extensions */,
 				8422DFC821F1DA66000367AF /* Controller */,
 				8422DFC721F1DA5F000367AF /* View */,
 				8422DFC621F1DA54000367AF /* Model */,
@@ -311,6 +322,7 @@
 				8421F00B21F2016C0020E2E5 /* Animations.swift in Sources */,
 				8422DFD221F1DFB8000367AF /* Enums.swift in Sources */,
 				8422DF9921F1CC4F000367AF /* AppDelegate.swift in Sources */,
+				8413D60021F3224000465321 /* String.swift in Sources */,
 				8422DFCE21F1DF58000367AF /* MoveImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

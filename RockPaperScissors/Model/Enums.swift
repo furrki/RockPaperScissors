@@ -50,7 +50,7 @@ extension Move {
             return "scissors"
         }
     }
-    static func getByTag(_ tag: Int) -> Move {
+    static func getBy(tag: Int) -> Move {
         if tag == 1 {
             return .rock
         } else if tag == 2 {

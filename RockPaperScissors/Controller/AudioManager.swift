@@ -11,7 +11,7 @@ import AVFoundation
 import Speech
 //import AudioKit
 
-class VocoAudio{
+class AudioManager{
     
     @objc var engine: AVAudioEngine?
     @objc var mp3buf = UnsafeMutablePointer<UInt8>.allocate(capacity: 4096)
@@ -19,7 +19,7 @@ class VocoAudio{
     var isRecording = false
     
     var Stt = ""
-    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "tr-TR"));
+    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-EN"));
     var recognitionRequest = SFSpeechAudioBufferRecognitionRequest();
     var recognitionTask = SFSpeechRecognitionTask();
     
@@ -35,7 +35,7 @@ class VocoAudio{
         }
     }
     
-    @objc func installTap(_ sttfinished: @escaping () -> Void) {
+    @objc func installTap(_ sttWork: @escaping (_ result: String) -> Void) {
         // onTapToTalk
         self.engine = AVAudioEngine()
         let engine = self.engine
@@ -47,16 +47,11 @@ class VocoAudio{
         recognitionRequest.shouldReportPartialResults = true;
         recognitionTask = (speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
             if error == nil{
-                if result != nil {
-                    if result!.isFinal {
-                        self.Stt.append( result!.bestTranscription.formattedString + ". ")
-                        self.recognitionRequest.endAudio()
-                        sttfinished()
-                    }
+                if let r = result {
+                    sttWork(r.bestTranscription.formattedString.lowercased().lastWord)
                 }
             } else {
-                self.recognitionRequest.endAudio()
-                sttfinished()
+                sttWork("")
             }
         }))!
         
@@ -79,6 +74,7 @@ class VocoAudio{
         engine?.inputNode.removeTap(onBus: 0)
         engine = nil
         recognitionRequest.endAudio();
+        
     }
 }
 

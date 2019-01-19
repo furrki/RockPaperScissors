@@ -41,13 +41,13 @@ extension Move {
     var str: String {
         switch self {
         case .rock:
-            return "rock"
+            return "taş"
             
         case .paper:
-            return "paper"
+            return "kağıt"
             
         case .scissors:
-            return "scissors"
+            return "makas"
         }
     }
     static func getBy(tag: Int) -> Move {

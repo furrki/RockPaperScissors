@@ -19,7 +19,7 @@ class AudioManager{
     var isRecording = false
     
     var Stt = ""
-    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-EN"));
+    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "tr-TR"));
     var recognitionRequest = SFSpeechAudioBufferRecognitionRequest();
     var recognitionTask = SFSpeechRecognitionTask();
     

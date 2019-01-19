@@ -174,10 +174,9 @@
                                     <constraint firstItem="r1w-Ua-Vgm" firstAttribute="baseline" secondItem="XeU-zs-kwz" secondAttribute="baseline" id="uwi-13-qCe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNk-YT-W2n">
-                                <rect key="frame" x="20" y="338" width="113" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=".." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNk-YT-W2n">
+                                <rect key="frame" x="20" y="338" width="106" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="K8l-Rb-EqP"/>
                                     <constraint firstAttribute="height" constant="17" id="s96-bZ-4G0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>

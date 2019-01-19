@@ -19,7 +19,7 @@ class AudioManager{
     var isRecording = false
     
     var Stt = ""
-    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-EN"));
+    var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-EN"));
     var recognitionRequest = SFSpeechAudioBufferRecognitionRequest();
     var recognitionTask = SFSpeechRecognitionTask();
     
@@ -37,6 +37,10 @@ class AudioManager{
     
     @objc func installTap(_ sttWork: @escaping (_ result: String) -> Void) {
         // onTapToTalk
+        speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-EN"));
+        recognitionRequest = SFSpeechAudioBufferRecognitionRequest();
+        recognitionTask = SFSpeechRecognitionTask();
+        
         self.engine = AVAudioEngine()
         let engine = self.engine
         let input = engine?.inputNode

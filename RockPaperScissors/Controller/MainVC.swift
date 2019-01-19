@@ -15,6 +15,7 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var sttLabel: UILabel!
     
     var pimgs: [MoveImageView] = []
     var opimgs: [MoveImageView] = []
@@ -115,7 +116,7 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     func sttCheck(r: String){
-        print(r)
+        sttLabel.text = r
         switch r  {
         case Move.rock.str:
             self.select(move: .rock)

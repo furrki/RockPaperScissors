@@ -27,10 +27,13 @@ extension UIView {
     
     func shake(completion: @escaping ()->()) {
         self.transform = CGAffineTransform(translationX: 20, y: 0)
-        UIView.animate(withDuration: 2.0, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-            self.transform = CGAffineTransform.identity
+        UIView.animate(withDuration: 1.2, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: { (finished: Bool) in
-            completion()
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.transform = CGAffineTransform.identity
+                    completion()
+                })
         })
     }
 }

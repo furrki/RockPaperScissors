@@ -38,6 +38,18 @@ extension Move {
             return 3
         }
     }
+    var str: String {
+        switch self {
+        case .rock:
+            return "rock"
+            
+        case .paper:
+            return "paper"
+            
+        case .scissors:
+            return "scissors"
+        }
+    }
     static func getByTag(_ tag: Int) -> Move {
         if tag == 1 {
             return .rock

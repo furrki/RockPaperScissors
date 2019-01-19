@@ -25,9 +25,10 @@ extension UIView {
         })
     }
     
-    func putOn(view: UIView, completion: @escaping ()->()) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.frame = CGRect(x: view.frame.minX + 20, y: view.frame.minY + 20, width: view.frame.width, height: view.frame.height)
+    func shake(completion: @escaping ()->()) {
+        self.transform = CGAffineTransform(translationX: 20, y: 0)
+        UIView.animate(withDuration: 2.0, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.transform = CGAffineTransform.identity
         }, completion: { (finished: Bool) in
             completion()
         })

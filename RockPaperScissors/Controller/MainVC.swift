@@ -51,16 +51,32 @@ class MainVC: UIViewController, UIGestureRecognizerDelegate {
                     nci.fadeOut {}
                 }
                 
-                Game.shared.move(Move.getByTag(sv.tag))
+                let dscore = Game.shared.move(Move.getByTag(sv.tag))
                 
                 let opMove = Game.shared.lastOpMove
                 let nonselectedImages = opimgs.filter({ $0.tag != opMove.tag })
                 for nsi in nonselectedImages {
                     nsi.fadeOut {}
                 }
-                turnTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
-                    self.reset()
+                let opSelected = opimgs.filter({ $0.tag == opMove.tag }).first!
+                
+                if dscore == 1 {
+                    sv.shake {
+                        self.reset()
+                    }
+                } else if dscore == -1 {
+                    opSelected.shake {
+                        self.reset()
+                    }
+                } else {
+                    sv.shake{
+                        self.reset()
+                    }
+                    opSelected.shake {
+                        self.reset()
+                    }
                 }
+                
             } else {
                 print("View Not Found")
             }
